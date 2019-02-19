@@ -72,6 +72,7 @@
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.label32 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label57 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
@@ -105,7 +106,10 @@
             this.label55 = new System.Windows.Forms.Label();
             this.label56 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.label57 = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
+            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.label59 = new System.Windows.Forms.Label();
+            this.label60 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -469,6 +473,7 @@
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(93, 22);
             this.textBox11.TabIndex = 41;
+            this.textBox11.TextChanged += new System.EventHandler(this.textBox11_TextChanged);
             this.textBox11.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Point);
             // 
             // label32
@@ -497,10 +502,19 @@
             this.panel1.Size = new System.Drawing.Size(204, 340);
             this.panel1.TabIndex = 43;
             // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Location = new System.Drawing.Point(3, 298);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(179, 34);
+            this.label57.TabIndex = 42;
+            this.label57.Text = "Не целые числа вводятся\r\n только через запятую";
+            // 
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(459, 546);
+            this.label33.Location = new System.Drawing.Point(459, 552);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(99, 17);
             this.label33.TabIndex = 71;
@@ -562,7 +576,7 @@
             // 
             // textBox12
             // 
-            this.textBox12.Location = new System.Drawing.Point(302, 546);
+            this.textBox12.Location = new System.Drawing.Point(302, 552);
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(93, 22);
             this.textBox12.TabIndex = 64;
@@ -605,7 +619,7 @@
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(150, 551);
+            this.label40.Location = new System.Drawing.Point(150, 555);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(99, 17);
             this.label40.TabIndex = 58;
@@ -668,11 +682,11 @@
             // label47
             // 
             this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(13, 551);
+            this.label47.Location = new System.Drawing.Point(13, 555);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(46, 17);
             this.label47.TabIndex = 51;
-            this.label47.Text = "63х67";
+            this.label47.Text = "48х72";
             // 
             // label48
             // 
@@ -788,20 +802,49 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label57
+            // label58
             // 
-            this.label57.AutoSize = true;
-            this.label57.Location = new System.Drawing.Point(3, 298);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(179, 34);
-            this.label57.TabIndex = 42;
-            this.label57.Text = "Не целые числа вводятся\r\n только через запятую";
+            this.label58.AutoSize = true;
+            this.label58.Location = new System.Drawing.Point(459, 587);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(99, 17);
+            this.label58.TabIndex = 80;
+            this.label58.Text = "Объем смолы";
+            // 
+            // textBox19
+            // 
+            this.textBox19.Location = new System.Drawing.Point(302, 584);
+            this.textBox19.Name = "textBox19";
+            this.textBox19.Size = new System.Drawing.Size(93, 22);
+            this.textBox19.TabIndex = 79;
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Location = new System.Drawing.Point(150, 587);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(99, 17);
+            this.label59.TabIndex = 78;
+            this.label59.Text = "Объем смолы";
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Location = new System.Drawing.Point(12, 587);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(46, 17);
+            this.label60.TabIndex = 77;
+            this.label60.Text = "63х67";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 700);
+            this.Controls.Add(this.label58);
+            this.Controls.Add(this.textBox19);
+            this.Controls.Add(this.label59);
+            this.Controls.Add(this.label60);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label56);
             this.Controls.Add(this.label55);
@@ -959,6 +1002,10 @@
         private System.Windows.Forms.Label label56;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.Label label60;
     }
 }
 
