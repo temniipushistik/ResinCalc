@@ -115,7 +115,7 @@ namespace WTDCalc_01
                 {
                     if (Fe < 0.3 && Mn < 0.1 && Hard <= 25)
                     {
-                        label56.Text = "PC002";
+                        label56.Text = "PC002 или TC007";
                     }
                     else if ((Y < 15 && Hard <= 11) ||
                             ((Y < 15) && (Hard > 11 && Hard < 30) &&
@@ -179,7 +179,8 @@ namespace WTDCalc_01
                 comboBox1.Text == "Экотар В" ||
                 comboBox1.Text == "Экотар С" ||
                 comboBox1.Text == "Экотар В30" ||
-                comboBox1.Text == "Экотар С30")
+                comboBox1.Text == "Экотар С30" ||
+                comboBox1.Text == "TC007")
             {
                 label20.Text = 20.ToString();
                 label19.Text = 25.ToString();
@@ -256,7 +257,8 @@ namespace WTDCalc_01
 
             //в зависимост от того какую смолу выбрали(|| - логическое ИЛИ)
             if (comboBox1.Text == "Экотар В" ||
-                comboBox1.Text == "Экотар В30")
+                comboBox1.Text == "Экотар В30" ||
+                comboBox1.Text=="TC007")
             {
                 for (int i = 0; i < 15; i++)
                 {
@@ -274,19 +276,20 @@ namespace WTDCalc_01
                 TableOfMediaToHome02[4] = 56.6;
                 TableOfMediaToHome02[5] = 84.9;
                 TableOfMediaToHome02[6] = 113.2;
-                TableOfMediaToHome01[7] = 155.65;
-                TableOfMediaToHome01[8] = 198.1;
-                TableOfMediaToHome01[9] = 283;
-                TableOfMediaToHome01[10] = 424.5;
-                TableOfMediaToHome01[11] = 622.6;
-                TableOfMediaToHome01[12] = 850;
-                TableOfMediaToHome01[13] = 1050;
-                TableOfMediaToHome01[14] = 1210;//закончили
+                TableOfMediaToHome02[7] = 155.65;
+                TableOfMediaToHome02[8] = 198.1;
+                TableOfMediaToHome02[9] = 283;
+                TableOfMediaToHome02[10] = 424.5;
+                TableOfMediaToHome02[11] = 622.6;
+                TableOfMediaToHome02[12] = 850;
+                TableOfMediaToHome02[13] = 1050;
+                TableOfMediaToHome02[14] = 1210;//закончили
                 for (int i = 0; i < 15; i++)
                 {
                     double MediaValue;
                     MediaValue = (1.2 * TableOfMediaToHome02[i]) / sumValue;
                     Capacity[i].Text = MediaValue.ToString("0.0");
+                   
                 }
             }
             else if (comboBox1.Text == "Экотар С" || comboBox1.Text == "Экотар С30" || comboBox1.Text == "Экотар А")

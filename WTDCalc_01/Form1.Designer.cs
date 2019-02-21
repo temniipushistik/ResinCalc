@@ -668,7 +668,8 @@
             "Экотар В30",
             "Экотар С",
             "Экотар С30",
-            "PC002"});
+            "PC002",
+            "TC007"});
             this.comboBox1.Location = new System.Drawing.Point(73, 38);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
